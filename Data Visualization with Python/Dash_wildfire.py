@@ -83,7 +83,7 @@ def reg_year_display(input_region,input_year):
    est_data = y_r_data.groupby('Year')['Estimated_fire_area'].mean().reset_index()
  
    fig1 = px.pie(est_data, values='Estemated_fire_area', names= 'Month',
-                 title="{} : Monthly Average Estimated Fire Area in year {}".format(input_region,input_year))
+                 title=f"{input_region} : Monthly Average Estimated Fire Area in year {input_year}")
    
      #Plot two - Monthly Average Count of Pixels for Presumed Vegetation Fires
    veg_data = y_r_data.groupby('Month')['Count'].mean().reset_index()
